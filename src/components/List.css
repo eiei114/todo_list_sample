@@ -1,0 +1,36 @@
+.Item{
+    background-color: #fff;
+    margin: 5%;
+    border-radius: 10px;
+}
+
+.ItemName{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5%;
+}
+
+/* MinusButtonボタンを押し込むようなアニメーション。 */
+.MinusButton{
+    background-color: #0DE5FF;
+    border-radius: 10px;
+    margin: 1% 1% 1% 60%;
+    padding: 10px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.MinusButton:hover{
+    background-color: #0DE5FF;
+    border-radius: 10px;
+    margin: 1% 1% 1% 60%;
+    padding: 10px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transform: scale(0.9);
+}
