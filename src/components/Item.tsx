@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Todo } from "./Todo";
-
+import "./Item.css";
 // 受け取るPropsの型を定義する
 type ItemProps = {
     todo: Todo;

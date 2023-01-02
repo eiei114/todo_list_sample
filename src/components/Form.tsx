@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Form.css";
 
 // 受け取るPropsの型を定義する
 type FormProps = {
@@ -11,6 +12,9 @@ const Form: React.FC<FormProps> = ({ createTodo }) => {
 
     // 作成したTODOを[createTodo]に渡す
     const addTodo = (e: React.FormEvent<HTMLFormElement>) => {
+        if (enteredTodo === '') {
+            alert("Please enter a task");
+        } else {
         e.preventDefault();
         const newTodo = {
             id: Math.floor(Math.random() * 1e5),
@@ -20,18 +24,21 @@ const Form: React.FC<FormProps> = ({ createTodo }) => {
         setEnteredTodo("");
     };
 
+    }
+
     return (
-        <div>
-            <form onSubmit={addTodo}>
+        <div className="FormParts">
+            <form onSubmit={addTodo} className="Form">
                 <input
                     type="text"
-                    placeholder="入力してね"
+                    placeholder="Add a todo"
                     value={enteredTodo}
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                         setEnteredTodo(e.target.value)
                     }
+                    className="Input"
                 />
-                <button>+</button>
+                <button className="FormButton">Add</button>
             </form>
         </div>
     );

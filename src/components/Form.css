@@ -1,4 +1,4 @@
-.Item{
+.FormParts{
     background-color: #fff;
     margin: 1% 5%;
     padding: 1%;
@@ -6,14 +6,29 @@
     box-shadow: 0 0 10px #000000;
 }
 
-.ItemName{
-    font-size: 20px;
-    font-weight: bold;
+.Form{
+    display: flex;
+    flex-direction: inherit;
+    align-items: center;
+    justify-content: center;
 }
 
-/* MinusButtonボタンを押し込むようなアニメーション。 */
-.MinusButton{
-    background-color: #0DE5FF;
+.Input{
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+    padding: 0 10px;
+    border-right: none;
+    border-top: none;
+    border-left: none;
+}
+
+.Input:focus{
+    outline: none;
+}
+
+.FormButton{
+    background-color: #12FF0D;
     border-radius: 10px;
     color: #fff;
     font-size: 20px;
@@ -23,8 +38,8 @@
     float: right;
 }
 
-.MinusButton:hover{
-    background-color: #0DE5FF;
+.FormButton:hover{
+    background-color: #12FF0D;
     border-radius: 10px;
     color: #fff;
     font-size: 20px;
