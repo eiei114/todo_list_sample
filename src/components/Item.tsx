@@ -34,7 +34,7 @@ export const Item: React.FC<ItemProps> = ({ todo, complete, updateTodo }) => {
 
     return (
         <div key={todo.id} className="Item">
-            <form onSubmit={confirmContent} style={{ display: "inline" }}>
+            <form onSubmit={confirmContent} className="input">
         <span onDoubleClick={editMode} className="ItemName">
           {todo.editing ? (
               <input
